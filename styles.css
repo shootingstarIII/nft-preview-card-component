@@ -72,7 +72,7 @@ main {
     font-family: 'Outfit', sans-serif;
     color: var(--white);
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 28px;
 }
 
@@ -82,7 +82,7 @@ main {
     font-family: 'Outfit', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 26px;
 }
 
@@ -95,11 +95,14 @@ main {
 .nft-details .price {
     display: flex;
     align-items: center;
+}
+
+.nft-details .price span {
     color: var(--cyan-400);
     font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 20px;  
 }
 
 .nft-details .time-left {
@@ -113,7 +116,7 @@ main {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 0.9rem;
     line-height: 20px;
 }
 
@@ -131,7 +134,7 @@ main {
 }
 
 .creator {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -145,7 +148,7 @@ main {
 }
 
 .creator p {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     color: var(--blue-500);
     font-family: 'Outfit', sans-serif;
     font-style: normal;
