@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: var(--blue-950);
+}
+
+.card {
+    width: 350px;
+    height: 596px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: var(--blue-900);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+}
+
+.image-container {
+    position: relative;
+    width: 302px;
+    height: 302px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 302px;
+    height: 302px;
+    background: rgba(0, 255, 248, 0.5); /* Optional: semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container .overlay .view-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.card:hover .overlay,
+.card:focus .overlay {
+    opacity: 1;
+}
+
+.content {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.content h1 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 28px;
+}
+
+.content > p {
+    margin-top: 1rem;
+    color: var(--blue-500);
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.nft-details {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nft-details .price {
+    display: flex;
+    align-items: center;
+    color: var(--cyan-400);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.nft-details .time-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nft-details .time-left span {
+    color: var(--blue-500);
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.nft-details .time-left img,
+.nft-details .price img {
+    margin-right: 0.35rem;
+}
+
+.divider {
+    margin-top: 1.5rem;
+    width: 302px;
+    height: 1px;
+    background: var(--blue-800);
+    border: none;
+}
+
+.creator {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.creator img {
+    width: 33px;
+    height: 33px;
+    border: 1px solid var(--white);  
+    border-radius: 50%;
+}
+
+.creator p {
+    margin-left: 1.5rem;
+    color: var(--blue-500);
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    gap: 8px;
+}
+
+.creator span {
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.card:hover,
+.card:focus,
+.card:hover .creator span,
+.card:focus .creator span,
+.card:hover h1,
+.card:focus h1 {
+    cursor: pointer;
+    color: var(--cyan-400);
+    transition: color 0.3s ease;
+}
+
+.card:hover .image-container img,
+.card:focus .image-container img {
+    color: red;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+:root {
+    --blue-500: #8BACD9;
+    --blue-800: #2E405A;
+    --blue-900: #15263F;
+    --blue-950: #0D192C;
+    --white: #FFFFFF;
+    --cyan-400: #00FFF8;
+    --black: #000000;
+}
